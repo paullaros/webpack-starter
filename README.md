@@ -1,5 +1,10 @@
 # Webpack Starter
 
+![Issues](https://img.shields.io/github/issues/paullaros/webpack-starter.svg)
+![Forks](https://img.shields.io/github/forks/paullaros/webpack-starter.svg)
+![Stars](https://img.shields.io/github/stars/paullaros/webpack-starter.svg)
+![License](https://img.shields.io/github/license/paullaros/webpack-starter.svg)
+
 This repository can be used to quickly set-up a webpack based project. This starter kit is mainly used with projects heavily relying on server-side languages. Features as webpack-dev-server & hot module reloading are not included.
 
 ## Features
