@@ -1,0 +1,31 @@
+{
+  "extends": ["plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "amd": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "fix": true,
+  "root": true,
+  "globals": {
+    "_": true,
+    "google": true,
+    "ga": true
+  },
+  "rules": {
+    "eqeqeq": [2, "allow-null"],
+    "quotes": [2, "single", { "allowTemplateLiterals": true }],
+    "no-unused-vars": [2, { "args": "none" }],
+    "strict": [2, "function"],
+    "no-mixed-spaces-and-tabs": [2, "smart-tabs"],
+    "no-loop-func": [2],
+    "curly": [2],
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "complexity": [1, 5],
+    "max-depth": [2, 3]
+  }
+}
