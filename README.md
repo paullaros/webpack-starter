@@ -32,5 +32,5 @@ npm install
 npm start
 
 # Run production build
-npm run bulid
+npm run build
 ```
