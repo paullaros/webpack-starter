@@ -36,5 +36,5 @@ npm start
 npm run serve
 
 # Run production build
-npm run bulid
+npm run build
 ```
