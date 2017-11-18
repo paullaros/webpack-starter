@@ -5,7 +5,7 @@
 ![Stars](https://img.shields.io/github/stars/paullaros/webpack-starter.svg)
 ![License](https://img.shields.io/github/license/paullaros/webpack-starter.svg)
 
-This repository can be used to quickly set-up a webpack based project. This starter kit is mainly used with projects heavily relying on server-side languages. Features as webpack-dev-server & hot module reloading are not included.
+Webpack Starter can be used to quickly set-up a webpack based project. This starter kit is mainly meant for projects that heavily use server-side languages, such as .NET, and serve prerendered HTML. The main use case of this starter kit is bundling JavaScript & CSS and writing those files to disk. Features as hot module replacement and generating HTML are not included.
 
 ## Features
 
@@ -15,6 +15,7 @@ This repository can be used to quickly set-up a webpack based project. This star
 - copy tasks for fonts & images
 - eslint: babel-eslint & jsx-a11y preset
 - production & development (watch) tasks
+- webpack dev server
 
 ## Quick start
 
@@ -28,9 +29,12 @@ cd webpack-starter
 # Install dependencies
 npm install
 
-# Start watch task
+# Run development build
 npm start
 
+# Start webpack dev server on http://localhost:8080
+npm run serve
+
 # Run production build
-npm run build
+npm run bulid
 ```

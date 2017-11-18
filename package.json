@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Quickly set-up a webpack based project",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p --config config/build.config.js --colors",
-    "start": "webpack --config config/dev.config.js --watch --colors"
+    "build": "cross-env NODE_ENV=production webpack -p --config config/build.config.js --progress --colors",
+    "start": "webpack --config config/dev.config.js --watch --progress --colors",
+    "serve": "webpack-dev-server --config config/dev.config.js --content-base dist/ --watch --progress --colors"
   },
   "author": "Paul Laros <pjg.laros@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paullaros/webpack-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paullaros/webpack-starter/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "7.1.6",
@@ -29,7 +37,6 @@
     "file-loader": "1.1.5",
     "node-sass": "4.6.1",
     "postcss-loader": "2.0.8",
-    "progress-bar-webpack-plugin": "1.10.0",
     "resolve-url-loader": "2.2.0",
     "sass-loader": "6.0.6",
     "script-loader": "0.7.2",

@@ -9,7 +9,6 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "fix": true,
   "root": true,
   "globals": {
     "_": true,
