@@ -13,7 +13,7 @@ Webpack Starter can be used to quickly set-up a webpack based project. This star
 - es6: by babel, presets & plugins
 - sass support: with autoprefixer
 - copy tasks for fonts & images
-- eslint: babel-eslint & jsx-a11y preset
+- eslint: with babel-eslint
 - production & development (watch) tasks
 - webpack dev server
 

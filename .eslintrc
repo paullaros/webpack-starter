@@ -1,6 +1,6 @@
 {
-  "extends": ["plugin:jsx-a11y/recommended"],
-  "plugins": ["jsx-a11y"],
+  "extends": [],
+  "plugins": [],
   "parser": "babel-eslint",
   "env": {
     "browser": true,

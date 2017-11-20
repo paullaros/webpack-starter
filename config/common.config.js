@@ -2,7 +2,6 @@
 const Path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const opts = {
   rootDir: process.cwd(),
@@ -25,9 +24,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {from: 'src/fonts', to: 'fonts'},
       {from: 'src/img', to: 'img'}
-    ]),
-    // Show progress while building (in console)
-    new ProgressBarPlugin()
+    ])
   ],
   module: {
     rules: [
