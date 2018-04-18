@@ -9,13 +9,13 @@ Webpack Starter can be used to quickly set-up a webpack based project. This star
 
 ## Features
 
-- webpack 3
-- es6: by babel, presets & plugins
+- webpack 4
+- webpack-serve
+- es8: by babel, presets & plugins
 - sass support: with autoprefixer
 - copy tasks for fonts & images
 - eslint: with babel-eslint
 - production & development (watch) tasks
-- webpack dev server
 
 ## Quick start
 
