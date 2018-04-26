@@ -16,6 +16,7 @@ Webpack Starter can be used to quickly set-up a webpack based project. This star
 - copy tasks for fonts & images
 - eslint: with babel-eslint
 - production & development (watch) tasks
+- uglifyjs
 
 ## Quick start
 
