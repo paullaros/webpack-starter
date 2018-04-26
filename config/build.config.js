@@ -1,6 +1,7 @@
 const Webpack = require('webpack')
 const WebpackMerge = require('webpack-merge');
 const WebpackCommon = require('./common.config');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = WebpackMerge(WebpackCommon, {
   mode: 'production',
@@ -9,6 +10,11 @@ module.exports = WebpackMerge(WebpackCommon, {
     new Webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        ecma: 8
       }
     })
   ]

@@ -1,6 +1,6 @@
 {
   "name": "Webpack-Starter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Quickly set-up a webpack based project",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config config/build.config.js --progress --colors",
@@ -29,7 +29,7 @@
     "css-loader": "0.28.11",
     "eslint": "4.19.1",
     "eslint-loader": "2.0.0",
-    "eslint-plugin-flowtype": "2.46.2",
+    "eslint-plugin-flowtype": "2.46.3",
     "eslint-plugin-import": "2.11.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "1.1.11",
@@ -38,10 +38,11 @@
     "resolve-url-loader": "2.3.0",
     "sass-loader": "7.0.1",
     "script-loader": "0.7.2",
-    "style-loader": "0.20.3",
+    "style-loader": "0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "1.0.1",
     "webpack": "4.6.0",
-    "webpack-cli": "2.0.14",
+    "webpack-cli": "2.0.15",
     "webpack-merge": "4.1.2",
     "webpack-serve": "0.3.1"
   },
