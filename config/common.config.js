@@ -1,6 +1,8 @@
 // Plugins
 const Path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const opts = {
@@ -15,11 +17,24 @@ module.exports = {
   output: {
     path: Path.join(opts.rootDir, 'dist'),
     pathinfo: opts.devBuild,
-    filename: 'js/bundle.js'
+    filename: 'js/[name].js'
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   },
   plugins: [
     // Extract css files to seperate bundle
-    new ExtractTextPlugin('css/main.css'),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css'
+    }),
     // Copy fonts and images to dist
     new CopyWebpackPlugin([
       {from: 'src/fonts', to: 'fonts'},
@@ -37,12 +52,11 @@ module.exports = {
       // Css-loader & sass-loader
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: ['css-loader', 'postcss-loader?sourceMap', 'resolve-url-loader', 'sass-loader']
-          }
-        )
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       },
       // Load fonts
       {

@@ -1,4 +1,4 @@
-import '../css/main.scss';
+import '../css/app.scss';
 import {onLoad} from './app';
 
 /* Fire onLoad */
